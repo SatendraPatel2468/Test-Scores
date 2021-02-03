@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <!--Candidate full profile-->
+    <a href="addEdit">
+        <h4 class="rounded-pill btn btn-success">Add new</h4>
+    </a>
+    <table class="table table-striped">
+        <h3 class="text-center">Complete Result</h3>
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>First test score</th>
+            <th>Second test score</th>
+            <th>Third test score</th>
+            <th>Average score</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <% for(var data of list){ %>
+                <tr>
+                    <td>
+                        <%= data.name %>
+                    </td>
+                    <td>
+                        <%= data.email %>
+                    </td>
+                    <td>
+                        <%= data.firstTest %>
+                    </td>
+                    <td>
+                        <%= data.secondTest %>
+                    </td>
+                    <td>
+                        <%= data.thirdTest %>
+                    </td>
+                    <td>
+                        <%= data.avg %>
+                    </td>
+
+                </tr>
+
+
+                <%}%>
+
+        </tbody>
+    </table>
+
+
+
+
+    <!-- 1st test result-->
+    <table class="table table-striped">
+        <h3 class="text-center">Test First</h3>
+        <thead>
+            <th> Highest scoring candidate</th>
+            <th> Highest score</th>
+            <th> Average scores</th>
+        </thead>
+        <tr>
+            <td>
+                <%= firstTestResult.name %>
+            </td>
+            <td>
+                <%= firstTestResult.firstTestHighest %>
+            </td>
+            <td>
+                <%= firstTestResult.firstTestAvg %>
+            </td>
+
+        </tr>
+
+
+
+
+        </tbody>
+
+    </table>
+
+
+    <!-- 2nd test result-->
+    <table class="table table-striped">
+        <h3 class="text-center">Test Second</h3>
+        <thead>
+            <th> Highest scoring candidate</th>
+            <th> Highest score</th>
+            <th> Average scores</th>
+        </thead>
+
+        <tr>
+            <td>
+                <%= secondTestResult.name %>
+            </td>
+            <td>
+                <%= secondTestResult.secondTestHighest %>
+            </td>
+            <td>
+                <%= secondTestResult.secondTestAvg %>
+            </td>
+
+
+        </tr>
+
+
+    </table>
+
+
+    <!-- 3rd test result-->
+    <table class="table table-striped">
+        <h3 class="text-center">Test Third</h3>
+        <thead>
+            <th> Highest scoring candidate</th>
+            <th> Highest score</th>
+            <th> Average scores</th>
+        </thead>
+
+
+        <tr>
+            <td>
+                <%= thirdTestResult.name %>
+            </td>
+            <td>
+                <%= thirdTestResult.thirdTestHighest %>
+            </td>
+            <td>
+                <%= thirdTestResult.thirdTestAvg %>
+            </td>
+
+
+        </tr>
+
+
+    </table>
+
+
+
+</body>
+
+</html>
